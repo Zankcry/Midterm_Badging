@@ -1,0 +1,25 @@
+<h2>Service Tickets</h2>
+
+<div class="search-box">
+  <input type="text" [formControl]="searchControl" placeholder="Search by title or body..." class="search-input">
+</div>
+
+@if (error$ | async; as error) {
+  <div class="error">{{ error }}</div>
+}
+
+@if (loading) {
+  <p>Loading services...</p>
+}
+
+<div class="services-list">
+  @if (filteredPosts$ | async; as posts) {
+    <p>Showing {{ posts.length }} records</p>
+    @for (post of posts; track post.id) {
+      <div class="card">
+        <h4>{{ post.title }} (ID: {{ post.id }})</h4>
+        <p>{{ post.body }}</p>
+      </div>
+    }
+  }
+</div>

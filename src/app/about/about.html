@@ -1,0 +1,7 @@
+<h2>About This Portal</h2>
+<p>{{ portalDescription | lowercase }}</p>
+
+<div class="info-section">
+  <p><strong>Today's Date:</strong> {{ currentDate | date:'fullDate' }}</p>
+  <p><strong>Current Time:</strong> {{ currentDate | date:'mediumTime' }}</p>
+</div>

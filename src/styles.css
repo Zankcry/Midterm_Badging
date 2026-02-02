@@ -1,1 +1,49 @@
 /* You can add global styles to this file, and also import other style files */
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  background-color: #333;
+  margin: 0;
+}
+
+nav ul li {
+  margin: 0;
+}
+
+nav ul li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  background-color: #111;
+}
+
+nav ul li a.active {
+  background-color: #04AA6D;
+}
+
+main {
+  padding: 20px;
+}
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.error {
+  color: red;
+  background-color: #ffe6e6;
+  padding: 10px;
+  border: 1px solid red;
+  margin-bottom: 10px;
+}
